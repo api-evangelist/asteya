@@ -1,23 +1,61 @@
 aid: asteya
+
 name: Asteya
-description: 'Asteya is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Asteya is a technology company focused on providing innovative solutions in the field of digital transformation. Founded in 2020, Asteya offers a suite of APIs and services that enable businesses to integrate advanced analytics, automation, and data management capabilities into their workflows. The company emphasizes security, scalability, and developer-friendly documentation to support a wide range of use cases across industries.'
+
 url: https://raw.githubusercontent.com/api-evangelist/asteya/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- API
+- Technology
+- Digital-Transformation
+- Analytics
+- Automation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://equityzen.com/company/asteya
+
+  - type: Hosts
+    url: hosts/asteya-hosts.yml
+  - type: Vendors
+    url: vendors/asteya-vendors.yml
+  - type: DomainSecurity
+    url: security/asteya-domain-security.yml
+  - type: Website
+    url: https://equityzen.com/company/asteya
+
+apis: []
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Asteya website asteya.com returns a JavaScript shell preventing machine reading of docs.
+  evidence:
+  - url: https://asteya.com
+    status: 200
+  checked: '2026-09-26'
+x-enrichment:
+  date: '2026-09-26'
+  status: minimal
+  artifacts_added: 2
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
